@@ -1,4 +1,4 @@
-package com.kpz.normandy.demo;
+package com.kpz.normandy.demo.common;
 
 import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.util.Lists;
@@ -75,7 +75,7 @@ public class FunctionTest {
     public void testPredicate() {
         List<String> list = Lists.newArrayList("Hello", "Lambda", "binghe", "lyz", "World");
         // not
-        System.out.println(filterString(list, Predicate.not(s -> s.length() >= 5)));
+//        System.out.println(filterString(list, Predicate.not(s -> s.length() >= 5)));
 
         // and
         System.out.println(filterString(list, ((Predicate<String>) s -> s.length() >= 5).and(s -> s.startsWith("H"))));
